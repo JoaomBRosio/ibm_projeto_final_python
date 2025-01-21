@@ -25,7 +25,7 @@ Banco Javer é uma aplicação desenvolvida em Python utilizando o framework Fla
 
 ### Pré-requisitos
 
-- Python 3.7+
+- Python 3.13.1
 - Flask
 - Flask-RESTful
 - SQLAlchemy
@@ -35,11 +35,11 @@ Banco Javer é uma aplicação desenvolvida em Python utilizando o framework Fla
 
 1. Clone o repositório:
     ```bash
-    git clone <URL-do-repositorio>
+    git clone https://github.com/JoaomBRosio/ibm_projeto_final_python
     ```
 2. Navegue até o diretório do projeto:
     ```bash
-    cd <diretorio-do-projeto>
+    cd diretorioDoProjeto
     ```
 3. Inicie a primeira aplicação:
     ```bash
@@ -57,25 +57,25 @@ Com ambas as aplicações rodando, você pode usar uma ferramenta como o Postman
 - Para cadastrar um novo cliente, faça uma requisição POST para `http://localhost:5001/clientes` com o seguinte JSON:
   ```json
   {
-     "nome": "Seu nome",
+     "nome": "Nome de cliente",
      "telefone": 123456789,
      "correntista": true,
      "saldo_cc": 90000.50
   }
   ```
 - Para buscar todos os clientes, faça uma requisição GET para `http://localhost:5001/clientes`.
-- Para buscar um cliente por ID, faça uma requisição GET para `http://localhost:5001/clientes/<cliente_id>`.
-- Para atualizar um cliente, faça uma requisição PUT para `http://localhost:5001/clientes/<cliente_id>` com o seguinte JSON:
+- Para buscar um cliente por ID, faça uma requisição GET para `http://localhost:5001/clientes/1`.
+- Para atualizar um cliente, faça uma requisição PUT para `http://localhost:5001/clientes/1` com o seguinte JSON:
   ```json
   {
-     "nome": "Seu nome atualizado",
+     "nome": "Nome atualizado",
      "telefone": 123456789,
      "correntista": true,
      "saldo_cc": 90000.50
   }
   ```
-- Para deletar um cliente, faça uma requisição DELETE para `http://localhost:5001/clientes/<cliente_id>`.
-- Para calcular o score de crédito de um cliente, faça uma requisição GET para `http://localhost:5000/score/<cliente_id>`.
+- Para deletar um cliente, faça uma requisição DELETE para `http://localhost:5001/clientes/1`.
+- Para calcular o score de crédito de um cliente, faça uma requisição GET para `http://localhost:5000/score/1`.
 
 E foi assim que solucionei o problema com Python. Espero que tenha gostado.
 
