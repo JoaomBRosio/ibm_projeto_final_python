@@ -6,6 +6,8 @@ app = Flask(__name__)
 api = Api(app)
 
 class Cliente(Resource):
+    # define os métodos GET, POST, PUT e DELETE
+    # para a rota /clientes e /clientes/<int:cliente_id>
     def get(self, cliente_id):
         response = requests.get(f'http://localhost:5001/clientes/{cliente_id}')
         return response.json()
@@ -24,6 +26,9 @@ class Cliente(Resource):
         response = requests.delete(f'http://localhost:5001/clientes/{cliente_id}')
         return response.json()
 
+# define a rota /score/<int:cliente_id>
+# que retorna o score de crédito de um cliente
+# baseado no saldo da conta corrente
 class ScoreCredito(Resource):
     def get(self, cliente_id):
         response = requests.get(f'http://localhost:5001/clientes/{cliente_id}')
